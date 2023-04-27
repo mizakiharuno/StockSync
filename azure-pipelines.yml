@@ -11,6 +11,11 @@ pool:
   Demands:
   - agent.name eq Desktop
 
+variables:
+  - name: build
+    value: 0.1
+  - name: description
+    value: 'Initial setup build with just HelloWorld code.'
 steps:
 - script: |
     IF exist StockSync (rmdir /Q /S StockSync)
@@ -27,5 +32,5 @@ steps:
     git add -A
     git config --global user.email "mizakiharuno@gmail.com"
     git config --global user.name "AzurePipeline"
-    git commit -m "Removed .yml files from the deploy."
+    git commit -m "Removed .yml files. Deploying Build $(build)." -m "Description: $(description)"
     git push
