@@ -25,5 +25,7 @@ steps:
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
     echo *.yml >> .gitignore
     git add -A
-    git commit -m 'Removed .yml files from the deploy.'
+    git config --global user.email "mizakiharuno@gmail.com"
+    git config --global user.name "AzurePipeline"
+    git commit -m "Removed .yml files from the deploy."
     git push
