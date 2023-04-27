@@ -1,0 +1,12 @@
+Testing/*.yaml
+Testing/*.yml
+Authentication/*.yaml
+Authentication/*.yml
+InventoryManagement/*.yaml
+InventoryManagement/*.yml
+OrderManagement/*.yaml
+OrderManagement/*.yml
+ShipmentManagement/*.yaml
+ShipmentManagement/*.yml
+Reporting/*.yaml
+Reporting/*.yml
