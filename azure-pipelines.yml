@@ -23,4 +23,5 @@ steps:
 - script: |
     cd StockSync
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
+    echo *.yml >> .gitignore
     git push
