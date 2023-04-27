@@ -24,4 +24,6 @@ steps:
     cd StockSync
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
     echo *.yml >> .gitignore
+    git add -A
+    git commit -m 'Removed .yml files from the deploy.'
     git push
