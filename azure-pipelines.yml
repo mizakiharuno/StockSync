@@ -28,6 +28,7 @@ steps:
 - script: |
     cd StockSync
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
+    git pull
     echo *.yml >> .gitignore
     git add -A
     git config --global user.email "mizakiharuno@gmail.com"
