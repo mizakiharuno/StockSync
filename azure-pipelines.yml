@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool: 
+  Name: Default
+  Demands:
+  - agent.name eq Desktop
+
+steps:
+- script: |
+    IF exist StockSync (rmdir /Q /S StockSync)
+  displayName: 'Delete StockSync folder if exists.'
+
+- script: |
+    git clone https://$(AdminAccess)@dev.azure.com/ProBonoTech/StockSync/_git/StockSync
+  displayName: 'Cloning StockSync Repo'
+
+- script: |
+    cd StockSync
+    git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
+    git push
