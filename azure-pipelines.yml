@@ -30,8 +30,9 @@ steps:
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
     git pull
     echo *.yml >> .gitignore
+    del azure-pipelines.yml
     git add -A
     git config --global user.email "mizakiharuno@gmail.com"
     git config --global user.name "AzurePipeline"
-    git commit -m "Removed .yml files. Deploying Build $(build)." -m "Description: $(description)"
+    git commit -m "Deploying Build $(build)." -m "Description: $(description)"
     git push
