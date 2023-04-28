@@ -10,3 +10,4 @@ ShipmentManagement/*.yaml
 ShipmentManagement/*.yml
 Reporting/*.yaml
 Reporting/*.yml
+*.yml 
