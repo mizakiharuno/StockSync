@@ -29,7 +29,6 @@ steps:
     cd StockSync
     git remote set-url origin https://mizakiharuno:$(GitHubAccess)@github.com/mizakiharuno/StockSync.git
     git pull
-    echo *.yml >> .gitignore
     del azure-pipelines.yml
     git add -A
     git config --global user.email "mizakiharuno@gmail.com"
