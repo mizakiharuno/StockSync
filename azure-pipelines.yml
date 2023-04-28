@@ -13,9 +13,9 @@ pool:
 
 variables:
   - name: build
-    value: 0.1
+    value: '0.1.1'
   - name: description
-    value: 'Initial setup build with just HelloWorld code.'
+    value: 'Finished testing full deployment from individual repos all the way through deployment pipeline.'
 steps:
 - script: |
     IF exist StockSync (rmdir /Q /S StockSync)
